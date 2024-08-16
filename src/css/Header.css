@@ -1,0 +1,171 @@
+/* Header.css */
+header{
+    /* background-color: #2963d8; */
+
+}
+.headerTop{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    padding: 5px 0px;
+}
+
+.informacion{
+    /* background-color: yellow; */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start;
+    align-items: center;
+    padding-left: 20px;
+    width: 50%;
+}
+.informacion > img{
+    width: 20px;
+    height: 20px;
+    margin: 0px 5px;
+}
+.informacion > a{
+    font-size: 15px;
+    margin-right: 15px;
+    text-decoration: none;
+    color: black;
+}
+.redesSociales{
+    /* background-color: orange; */
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 20px;
+    width: 50%;
+}
+.redesSociales > img{
+    margin: 0px 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.redesSociales > img:hover{
+    transform: scale(1.2);
+}
+
+/**/
+.headerBot {
+    background-color: #282c34;
+    padding: 10px 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    font-weight: bold;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logoImg{
+    width: 55px;
+}
+.NombreLogo{
+
+    font-size: 15px;
+
+}
+nav {
+    position: relative;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+.nav-links {
+    list-style-type: none;
+    /* background-color: orange; */
+    padding-right: 40px;
+    margin: 0;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+.nav-links li {
+    display: flex;
+    /* background-color: orange; */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0px 10px;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    /* background-color: #61dafb; */
+    color: rgb(116, 105, 105);
+}
+/* src/css/Header.css */
+
+/* Añadir estos estilos al final de tu archivo CSS */
+
+.logout-button {
+    background-color: #ff4d4d; /* Color de fondo rojo para el botón de logout */
+    color: #fff; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    padding: 0.5rem 1rem; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-size: 1rem; /* Tamaño del texto */
+    transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+}
+
+.logout-button:hover {
+    background-color: #e60000; /* Color de fondo más oscuro al pasar el mouse */
+}
+
+
+
+
+/* Estilos para el menú desplegable en pantallas pequeñas */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 42px;
+        right: 0px;
+        background-color: #2963d8;
+        margin-right:-20px ;
+        width: 200px;
+        height: 150px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 15px;
+        text-align: center;
+    }
+}
