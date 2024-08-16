@@ -1,11 +1,95 @@
-
-/* Estilos para el Footer */
 footer {
     background-color: #282c34;
     color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
+    padding: 50px 0px;
     width: 100%;
     bottom: 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    margin: 10px;
+    max-width: 300px;
+}
+
+.footer-section h3 {
+    border-bottom: 2px solid #61dafb;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    font-size: 12px;
+    text-align: justify;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+    color: #61dafb;
+}
+
+.social-icons a {
+    color: #61dafb;
+    padding: 10px 5px;
+    text-decoration: none;
+}
+
+.social-icons > a > img {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.social-icons a > img:hover {
+    transform: scale(1.2);
+}
+
+.footer-section form input,
+.footer-section form button {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.footer-section form input {
+    border: 1px solid #ddd;
+}
+
+.footer-section form button {
+    background-color: #61dafb;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.footer-section form button:hover {
+    background-color: #4fa3b3;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
 }

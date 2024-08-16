@@ -1,17 +1,15 @@
-/* Header.css */
-header{
+header {
     /* background-color: #2963d8; */
-
 }
-.headerTop{
+
+.headerTop {
     display: flex;
     flex-flow: row wrap;
     width: 100%;
     padding: 5px 0px;
 }
 
-.informacion{
-    /* background-color: yellow; */
+.informacion {
     display: flex;
     flex-flow: row wrap;
     justify-content: start;
@@ -19,36 +17,39 @@ header{
     padding-left: 20px;
     width: 50%;
 }
-.informacion > img{
+
+.informacion > img {
     width: 20px;
     height: 20px;
     margin: 0px 5px;
 }
-.informacion > a{
+
+.informacion > a {
     font-size: 15px;
     margin-right: 15px;
     text-decoration: none;
     color: black;
 }
-.redesSociales{
-    /* background-color: orange; */
+
+.redesSociales {
     display: flex;
     justify-content: end;
     align-items: center;
     padding-right: 20px;
     width: 50%;
 }
-.redesSociales > img{
+
+.redesSociales > a > img {
     margin: 0px 10px;
     width: 20px;
     height: 20px;
     cursor: pointer;
 }
-.redesSociales > img:hover{
+
+.redesSociales > img:hover {
     transform: scale(1.2);
 }
 
-/**/
 .headerBot {
     background-color: #282c34;
     padding: 10px 20px;
@@ -69,14 +70,15 @@ header{
     justify-content: center;
     align-items: center;
 }
-.logoImg{
+
+.logoImg {
     width: 55px;
 }
-.NombreLogo{
 
+.NombreLogo {
     font-size: 15px;
-
 }
+
 nav {
     position: relative;
 }
@@ -93,17 +95,16 @@ nav {
 
 .nav-links {
     list-style-type: none;
-    /* background-color: orange; */
     padding-right: 40px;
     margin: 0;
     display: flex;
-    align-items: start;
-    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 .nav-links li {
     display: flex;
-    /* background-color: orange; */
+    text-transform: uppercase;
 }
 
 .nav-links a {
@@ -111,40 +112,131 @@ nav {
     text-decoration: none;
     padding: 0px 10px;
     border-radius: 4px;
-    font-size: 18px;
+    font-size: 12px;
 }
 
 .nav-links a:hover {
-    /* background-color: #61dafb; */
     color: rgb(116, 105, 105);
 }
-/* src/css/Header.css */
 
-/* Añadir estos estilos al final de tu archivo CSS */
-
-.logout-button {
-    background-color: #ff4d4d; /* Color de fondo rojo para el botón de logout */
-    color: #fff; /* Color del texto blanco */
-    border: none; /* Sin borde */
-    padding: 0.5rem 1rem; /* Espaciado interno */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    font-size: 1rem; /* Tamaño del texto */
-    transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+.search-bar {
+    display: flex;
+    align-items: center;
 }
 
-.logout-button:hover {
-    background-color: #e60000; /* Color de fondo más oscuro al pasar el mouse */
+.search-bar input {
+    padding: 5px;
+}
+
+.search-bar button {
+    background-color: #2963d8;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.user-menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+   
+    
+}
+#colorIniciosesion{
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* background-color: orange; */
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    text-transform: uppercase;
+    
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    /* background-color: orange; */
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 20px;
+    background-color: #fff;
+    border: 2px solid #fff;
+    transition: border-color 0.3s ease;
+}
+
+.user-avatar:hover {
+    border-color: #61dafb;
+}
+
+.user-menu-options {
+    display: none;
+    position: absolute;
+    top: 49px; /* Ajusta esto si es necesario para posicionar correctamente el menú */
+    right: 0;
+    background-color: #fff;
+    /* border: 1px solid #ddd; */
+    /* border-radius: 4px; */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px;
+    margin-right: -20px;
+    z-index: 1000;
+
+}
+
+.user-menu-options li {
+    margin: 0;
+    padding: 5px 0px;
+}
+.user-name{
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.user-menu-options a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.logout-button{
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.user-menu-options a:hover, .user-menu-options .logout-button:hover {
+   color: #2963d8;
+}
+
+.user-menu .user-menu-options {
+    display: flex;
+    flex-direction: column;
+    background-color: #282c34;
+    justify-content: center;
+    align-items: start;
+    width: 150px;
+    
 }
 
 
 
 
-/* Estilos para el menú desplegable en pantallas pequeñas */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
-        
     }
 
     .nav-links {
@@ -154,7 +246,7 @@ nav {
         top: 42px;
         right: 0px;
         background-color: #2963d8;
-        margin-right:-20px ;
+        margin-right: -20px;
         width: 200px;
         height: 150px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
