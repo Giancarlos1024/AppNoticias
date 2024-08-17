@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import '../css/Contact.css';
+import '../css/Contact.css';
 
 const Contact = () => {
     const [name, setName] = useState('');
@@ -15,27 +15,27 @@ const Contact = () => {
 
     return (
         <div className="contact">
-            <h1>Contact Us</h1>
+            <h2>CONTACTANOS</h2>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
-                    <label htmlFor="name">Name</label>
+                    <label htmlFor="name">Nombre Completo</label>
                     <input
                         id="name"
                         type="text"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
-                        placeholder="Your Name"
+                        placeholder="Ingrese su nombre completo"
                         required
                     />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="email">Email</label>
+                    <label htmlFor="email">Correo Electronico</label>
                     <input
                         id="email"
                         type="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        placeholder="Your Email"
+                        placeholder="Ingrese su correo"
                         required
                     />
                 </div>
@@ -45,11 +45,11 @@ const Contact = () => {
                         id="message"
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
-                        placeholder="Your Message"
+                        placeholder="ingrese un mensaje"
                         required
                     ></textarea>
                 </div>
-                <button type="submit">Send Message</button>
+                <button type="submit">Enviar</button>
             </form>
             {status && <p>{status}</p>}
         </div>

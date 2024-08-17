@@ -12,27 +12,27 @@ const Footer = () => {
                 
                 <div className="footer-section">
                     <h3>Contacto</h3>
-                    <p>Dirección: Calle Ejemplo 123, Ciudad, País</p>
-                    <p>Teléfono: +123 456 7890</p>
+                    <p>Dirección: Calle buenos aires 123, argentina</p>
+                    <p>Teléfono: +54 9387440-3995</p>
                 </div>
                 <div className="footer-section">
                     <h3>Enlaces Rápidos</h3>
                     <ul>
-                        <li><a href="/">Inicio</a></li>
-                        <li><a href="/noticias">Últimas Noticias</a></li>
+                        
+                        <li><a href="/">Últimas Noticias</a></li>
                         <li><a href="/contact">Contacto</a></li>
-                        <li><a href="/privacidad">Política de Privacidad</a></li>
-                        <li><a href="/cookies">Política de Cookies</a></li>
-                        <li><a href="/accesibilidad">Accesibilidad</a></li>
+                        <li><a href="/categories">Categorias</a></li>
+                        <li><a href="/politica">Política de Privacidad</a></li>
+                        
                     </ul>
                 </div>
-                <div className="footer-section">
+                {/* <div className="footer-section">
                     <h3>Suscríbete</h3>
                     <form action="/subscribe" method="post">
                         <input type="email" name="email" placeholder="Tu email" required />
                         <button type="submit">Suscribirse</button>
                     </form>
-                </div>
+                </div> */}
                 
                 <div className="footer-section">
                     <h3>Redes Sociales</h3>

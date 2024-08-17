@@ -12,6 +12,8 @@ import Notfound from './pages/Notfound';
 import Footer from './components/Footer';
 import { AuthProvider } from './contexts/AuthContext'; // Asegúrate de importar el AuthProvider
 import './App.css';
+import NewsForm from './components/NewsForm';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 const App = () => {
     return (
@@ -25,6 +27,8 @@ const App = () => {
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/profile" element={<Profile />} />
                     <Route path="/categories" element={<Categories />} />
+                    <Route path="/panel" element={<NewsForm />} />
+                    <Route path="/politica" element={<PrivacyPolicy />} />
                     <Route path="*" element={<Notfound />} />
                 </Routes>
                 <Footer />

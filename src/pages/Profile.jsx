@@ -1,15 +1,24 @@
+// src/pages/Profile.jsx
 import React, { useContext } from 'react';
-// import { AuthContext } from '../contexts/AuthContext';
+import { AuthContext } from '../contexts/AuthContext';
+import '../css/Profile.css';
 
 const Profile = () => {
-    // const { token } = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
 
-    // Puedes usar el token para obtener detalles adicionales si es necesario
+    if (!user) {
+        return <p>Please log in to view your profile.</p>;
+    }
+
     return (
-        <div>
-            <h1>Profile Page</h1>
-            <p>Welcome, user!</p>
-           
+        <div className="profile-container">
+            <div className="profile-header">
+                <img src="/img/avatar.png" alt={`${user.name}'s avatar`} className="profile-avatar" />
+            </div>
+            <div className="profile-details">  
+                <p><strong>Usuario:</strong> {user.name}</p>
+                <p><strong>Correo:</strong> {user.email}</p> {/* Mostrar correo electrónico */}
+            </div>
         </div>
     );
 };

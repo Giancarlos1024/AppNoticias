@@ -60,7 +60,12 @@ header {
     position: relative;
     font-weight: bold;
 }
-
+.logo{
+    /* background-color: orange; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .logo a {
     color: white;
     text-decoration: none;
@@ -69,14 +74,19 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* background-color: #2963d8; */
 }
 
 .logoImg {
-    width: 55px;
+    width: 50px;
+    margin-top: -5px;
 }
 
 .NombreLogo {
     font-size: 15px;
+    margin-top: 0px;
+    
+    
 }
 
 nav {
@@ -208,16 +218,19 @@ nav {
     font-weight: bold;
     cursor: pointer;
 }
-.logout-button{
+#logout-button{
     background: none;
     border: none;
     color: #fff;
     font-size: 12px;
     font-weight: bold;
     cursor: pointer;
+    transform: none;
+    /* background-color: orange; */
+    padding: 0px;
 }
 
-.user-menu-options a:hover, .user-menu-options .logout-button:hover {
+.user-menu-options a:hover, .user-menu-options #logout-button:hover {
    color: #2963d8;
 }
 

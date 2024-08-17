@@ -1,3 +1,4 @@
+// src/contexts/AuthContext.jsx
 import React, { createContext, useState } from 'react';
 
 export const AuthContext = createContext();
@@ -8,10 +9,10 @@ export const AuthProvider = ({ children }) => {
 
     const login = (newToken, userData) => {
         setToken(newToken);
-        setUser(userData); // Asegúrate de recibir y guardar userData
+        setUser(userData); // Incluye el correo electrónico en userData
         localStorage.setItem('authToken', newToken);
-        localStorage.setItem('user', JSON.stringify(userData)); // Guardar userData también
-        console.log('User logged in:', userData); // Agregado para depuración
+        localStorage.setItem('user', JSON.stringify(userData));
+        console.log('User logged in:', userData);
     };
 
     const logout = () => {

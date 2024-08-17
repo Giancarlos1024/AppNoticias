@@ -1,27 +1,27 @@
 // src/pages/Login.jsx
 import React, { useState, useContext } from 'react';
-import { AuthContext } from '../contexts/AuthContext'; // Asegúrate de que esta ruta sea correcta
-import { useNavigate } from 'react-router-dom'; // Importar useNavigate
+import { AuthContext } from '../contexts/AuthContext';
+import { useNavigate } from 'react-router-dom';
 import '../css/Login.css';
 
 const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [email, setEmail] = useState(''); // Nuevo estado para el correo
     const [error, setError] = useState(null);
-    const { login } = useContext(AuthContext); // Usa el contexto
-    const navigate = useNavigate(); // Inicializa useNavigate
+    const { login } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const handleLogin = (event) => {
         event.preventDefault();
         console.log('Form submitted');
-        console.log('login function:', login);
     
         fetch('https://sandbox.academiadevelopers.com/api-auth/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ username, password }),
+            body: JSON.stringify({ username, password, email }), // Incluye el correo en la solicitud
         })
         .then(response => {
             if (!response.ok) {
@@ -32,8 +32,7 @@ const Login = () => {
         .then(data => {
             console.log('Response data:', data);
             if (data.token) {
-                // Aquí asumimos que la API solo devuelve el token. Ajusta si es necesario.
-                login(data.token, { name: username }); // Usa un valor de ejemplo para userData
+                login(data.token, { name: username, email }); // Incluye el correo en userData
                 navigate('/');
             } else {
                 throw new Error('No token received');
@@ -44,8 +43,6 @@ const Login = () => {
             setError('Error de autenticación. Verifique sus credenciales.');
         });
     };
-    
-    
 
     return (
         <div className="login-container">
@@ -62,6 +59,17 @@ const Login = () => {
                             onChange={(e) => setUsername(e.target.value)}
                             className="form-input"
                             placeholder="ingresa tu nombre de usuario"
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="email">Correo Electrónico</label>
+                        <input
+                            id="email"
+                            type="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            className="form-input"
+                            placeholder="ingresa tu correo electrónico"
                         />
                     </div>
                     <div className="form-group">
